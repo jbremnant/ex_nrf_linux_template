@@ -1,9 +1,10 @@
 # ex_nrf_s110_template
 
-Example of nRF51822 development on linux using full s110 softdevice stack.
-Taken from excellent starting point
-[here](https://github.com/pauloborges/nrf51822-linux-template)
+Project template for nRF51822 development on linux using gcc toolchain, segger jlink.
+Full s110 softdevice stack is used. The following repo shows the HRM profile over BLE.
 
+Modified from an excellent starting point
+[here](https://github.com/pauloborges/nrf51822-linux-template)
 
 ## Tweaks
 
