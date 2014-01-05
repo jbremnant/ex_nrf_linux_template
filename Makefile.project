@@ -1,0 +1,30 @@
+###############################################################################
+# DEPENDENCIES
+###############################################################################
+
+NRF51_SDK_PATH		= /opt/nordic/nRF51/SDK_v5.1.0.36092
+NRF51_SOFTDEVICE	= /opt/nordic/nRF51/sd/s110_sd_v6/s110_nrf51822_6.0.0_softdevice.hex
+JLINK_PATH			  = /opt/SEGGER/JLink
+
+###############################################################################
+# TARGET
+###############################################################################
+
+SOC				= NRF51822_QFAA_CA
+SOC_VARIANT		= xxaa
+BOARD			= BOARD_PCA10001
+USE_SOFTDEVICE	= s110
+# USE_SOFTDEVICE	= blank
+
+###############################################################################
+# PROJECT
+###############################################################################
+
+PROJECT_TARGET			= hrs
+
+PROJECT_INCLUDE_PATHS   = src
+PROJECT_C_SOURCE_PATHS	= src $(SDK_SOURCE_PATH)/nrf_delay
+PROJECT_C_SOURCE_FILES	= softdevice_handler.c ble_bas.c ble_srv_common.c ble_hids.c ble_hrs.c \
+                          ble_bondmngr.c ble_advdata.c ble_dis.c ble_conn_params.c \
+                          crc16.c ble_flash.c pstorage.c app_timer.c app_button.c app_gpiote.c \
+                          battery.c led.c main.c
